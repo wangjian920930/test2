@@ -1,1 +1,1 @@
-# test2
+今天在ssrs上做了一个报表，遇到的难题就是sql 多条件查询，后来查了一些资料，终于知道要怎么写了，sql如下： where 1=1 and ([Employee_Corporation_CorporationId].[Name]=@company or @company='') and ([Employee_Department_DepartmentId].[Name]=@department or @department='') and([Employee].[CnName]=@name or @name is null) and ([Employee].[Code]=@code1 or @code1 is null or [Employee].[Code] between @code1 and @code2) and ([Employee].[Date]=@encomdate1 or @encomdate1 is null or [Employee].[Date] between @encomdate1 and @encomdate2) and([Employee_EmployeeState_EmployeeStateId].[Name]=@userstatus or @userstatus='')
